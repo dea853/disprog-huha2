@@ -27,39 +27,6 @@ public interface EzBookingWS {
 
     /**
      * 
-     * @param name
-     * @return
-     *     returns java.lang.String
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "hello", targetNamespace = "http://disprog.ubaya.com/", className = "com.ubaya.disprog.Hello")
-    @ResponseWrapper(localName = "helloResponse", targetNamespace = "http://disprog.ubaya.com/", className = "com.ubaya.disprog.HelloResponse")
-    @Action(input = "http://disprog.ubaya.com/EzBookingWS/helloRequest", output = "http://disprog.ubaya.com/EzBookingWS/helloResponse")
-    public String hello(
-        @WebParam(name = "name", targetNamespace = "")
-        String name);
-
-    /**
-     * 
-     * @param password
-     * @param username
-     * @return
-     *     returns java.lang.String
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "cekLoginPelanggan", targetNamespace = "http://disprog.ubaya.com/", className = "com.ubaya.disprog.CekLoginPelanggan")
-    @ResponseWrapper(localName = "cekLoginPelangganResponse", targetNamespace = "http://disprog.ubaya.com/", className = "com.ubaya.disprog.CekLoginPelangganResponse")
-    @Action(input = "http://disprog.ubaya.com/EzBookingWS/cekLoginPelangganRequest", output = "http://disprog.ubaya.com/EzBookingWS/cekLoginPelangganResponse")
-    public String cekLoginPelanggan(
-        @WebParam(name = "username", targetNamespace = "")
-        String username,
-        @WebParam(name = "password", targetNamespace = "")
-        String password);
-
-    /**
-     * 
      * @param namaPengguna
      * @param password
      * @param username
@@ -88,10 +55,10 @@ public interface EzBookingWS {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "cekLoginAdministrator", targetNamespace = "http://disprog.ubaya.com/", className = "com.ubaya.disprog.CekLoginAdministrator")
-    @ResponseWrapper(localName = "cekLoginAdministratorResponse", targetNamespace = "http://disprog.ubaya.com/", className = "com.ubaya.disprog.CekLoginAdministratorResponse")
-    @Action(input = "http://disprog.ubaya.com/EzBookingWS/cekLoginAdministratorRequest", output = "http://disprog.ubaya.com/EzBookingWS/cekLoginAdministratorResponse")
-    public String cekLoginAdministrator(
+    @RequestWrapper(localName = "cekLoginPelanggan", targetNamespace = "http://disprog.ubaya.com/", className = "com.ubaya.disprog.CekLoginPelanggan")
+    @ResponseWrapper(localName = "cekLoginPelangganResponse", targetNamespace = "http://disprog.ubaya.com/", className = "com.ubaya.disprog.CekLoginPelangganResponse")
+    @Action(input = "http://disprog.ubaya.com/EzBookingWS/cekLoginPelangganRequest", output = "http://disprog.ubaya.com/EzBookingWS/cekLoginPelangganResponse")
+    public String cekLoginPelanggan(
         @WebParam(name = "username", targetNamespace = "")
         String username,
         @WebParam(name = "password", targetNamespace = "")
@@ -106,14 +73,29 @@ public interface EzBookingWS {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "registrasiAdmin", targetNamespace = "http://disprog.ubaya.com/", className = "com.ubaya.disprog.RegistrasiAdmin")
-    @ResponseWrapper(localName = "registrasiAdminResponse", targetNamespace = "http://disprog.ubaya.com/", className = "com.ubaya.disprog.RegistrasiAdminResponse")
-    @Action(input = "http://disprog.ubaya.com/EzBookingWS/registrasiAdminRequest", output = "http://disprog.ubaya.com/EzBookingWS/registrasiAdminResponse")
-    public String registrasiAdmin(
+    @RequestWrapper(localName = "cekLoginAdministrator", targetNamespace = "http://disprog.ubaya.com/", className = "com.ubaya.disprog.CekLoginAdministrator")
+    @ResponseWrapper(localName = "cekLoginAdministratorResponse", targetNamespace = "http://disprog.ubaya.com/", className = "com.ubaya.disprog.CekLoginAdministratorResponse")
+    @Action(input = "http://disprog.ubaya.com/EzBookingWS/cekLoginAdministratorRequest", output = "http://disprog.ubaya.com/EzBookingWS/cekLoginAdministratorResponse")
+    public String cekLoginAdministrator(
         @WebParam(name = "username", targetNamespace = "")
         String username,
         @WebParam(name = "password", targetNamespace = "")
         String password);
+
+    /**
+     * 
+     * @param name
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "hello", targetNamespace = "http://disprog.ubaya.com/", className = "com.ubaya.disprog.Hello")
+    @ResponseWrapper(localName = "helloResponse", targetNamespace = "http://disprog.ubaya.com/", className = "com.ubaya.disprog.HelloResponse")
+    @Action(input = "http://disprog.ubaya.com/EzBookingWS/helloRequest", output = "http://disprog.ubaya.com/EzBookingWS/helloResponse")
+    public String hello(
+        @WebParam(name = "name", targetNamespace = "")
+        String name);
 
     /**
      * 
@@ -151,26 +133,14 @@ public interface EzBookingWS {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "cekLoginMitra", targetNamespace = "http://disprog.ubaya.com/", className = "com.ubaya.disprog.CekLoginMitra")
-    @ResponseWrapper(localName = "cekLoginMitraResponse", targetNamespace = "http://disprog.ubaya.com/", className = "com.ubaya.disprog.CekLoginMitraResponse")
-    @Action(input = "http://disprog.ubaya.com/EzBookingWS/cekLoginMitraRequest", output = "http://disprog.ubaya.com/EzBookingWS/cekLoginMitraResponse")
-    public String cekLoginMitra(
+    @RequestWrapper(localName = "registrasiAdmin", targetNamespace = "http://disprog.ubaya.com/", className = "com.ubaya.disprog.RegistrasiAdmin")
+    @ResponseWrapper(localName = "registrasiAdminResponse", targetNamespace = "http://disprog.ubaya.com/", className = "com.ubaya.disprog.RegistrasiAdminResponse")
+    @Action(input = "http://disprog.ubaya.com/EzBookingWS/registrasiAdminRequest", output = "http://disprog.ubaya.com/EzBookingWS/registrasiAdminResponse")
+    public String registrasiAdmin(
         @WebParam(name = "username", targetNamespace = "")
         String username,
         @WebParam(name = "password", targetNamespace = "")
         String password);
-
-    /**
-     * 
-     * @return
-     *     returns java.lang.String
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "displayMitra", targetNamespace = "http://disprog.ubaya.com/", className = "com.ubaya.disprog.DisplayMitra")
-    @ResponseWrapper(localName = "displayMitraResponse", targetNamespace = "http://disprog.ubaya.com/", className = "com.ubaya.disprog.DisplayMitraResponse")
-    @Action(input = "http://disprog.ubaya.com/EzBookingWS/displayMitraRequest", output = "http://disprog.ubaya.com/EzBookingWS/displayMitraResponse")
-    public String displayMitra();
 
     /**
      * 
@@ -195,5 +165,35 @@ public interface EzBookingWS {
         Date tanggalPemesanan,
         @WebParam(name = "jumlahOrang", targetNamespace = "")
         int jumlahOrang);
+
+    /**
+     * 
+     * @param password
+     * @param username
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "cekLoginMitra", targetNamespace = "http://disprog.ubaya.com/", className = "com.ubaya.disprog.CekLoginMitra")
+    @ResponseWrapper(localName = "cekLoginMitraResponse", targetNamespace = "http://disprog.ubaya.com/", className = "com.ubaya.disprog.CekLoginMitraResponse")
+    @Action(input = "http://disprog.ubaya.com/EzBookingWS/cekLoginMitraRequest", output = "http://disprog.ubaya.com/EzBookingWS/cekLoginMitraResponse")
+    public String cekLoginMitra(
+        @WebParam(name = "username", targetNamespace = "")
+        String username,
+        @WebParam(name = "password", targetNamespace = "")
+        String password);
+
+    /**
+     * 
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "displayMitra", targetNamespace = "http://disprog.ubaya.com/", className = "com.ubaya.disprog.DisplayMitra")
+    @ResponseWrapper(localName = "displayMitraResponse", targetNamespace = "http://disprog.ubaya.com/", className = "com.ubaya.disprog.DisplayMitraResponse")
+    @Action(input = "http://disprog.ubaya.com/EzBookingWS/displayMitraRequest", output = "http://disprog.ubaya.com/EzBookingWS/displayMitraResponse")
+    public String displayMitra();
 
 }

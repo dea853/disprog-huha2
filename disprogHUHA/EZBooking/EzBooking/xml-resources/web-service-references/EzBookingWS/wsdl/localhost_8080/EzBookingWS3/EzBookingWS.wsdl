@@ -4,11 +4,11 @@
 <xsd:import namespace="http://disprog.ubaya.com/" schemaLocation="http://localhost:8080/EzBookingWS3/EzBookingWS?xsd=1"/>
 </xsd:schema>
 </types>
-<message name="hello">
-<part name="parameters" element="tns:hello"/>
+<message name="registrasiPelanggan">
+<part name="parameters" element="tns:registrasiPelanggan"/>
 </message>
-<message name="helloResponse">
-<part name="parameters" element="tns:helloResponse"/>
+<message name="registrasiPelangganResponse">
+<part name="parameters" element="tns:registrasiPelangganResponse"/>
 </message>
 <message name="cekLoginPelanggan">
 <part name="parameters" element="tns:cekLoginPelanggan"/>
@@ -16,17 +16,23 @@
 <message name="cekLoginPelangganResponse">
 <part name="parameters" element="tns:cekLoginPelangganResponse"/>
 </message>
-<message name="registrasiPelanggan">
-<part name="parameters" element="tns:registrasiPelanggan"/>
-</message>
-<message name="registrasiPelangganResponse">
-<part name="parameters" element="tns:registrasiPelangganResponse"/>
-</message>
 <message name="cekLoginAdministrator">
 <part name="parameters" element="tns:cekLoginAdministrator"/>
 </message>
 <message name="cekLoginAdministratorResponse">
 <part name="parameters" element="tns:cekLoginAdministratorResponse"/>
+</message>
+<message name="hello">
+<part name="parameters" element="tns:hello"/>
+</message>
+<message name="helloResponse">
+<part name="parameters" element="tns:helloResponse"/>
+</message>
+<message name="registrasiMitra">
+<part name="parameters" element="tns:registrasiMitra"/>
+</message>
+<message name="registrasiMitraResponse">
+<part name="parameters" element="tns:registrasiMitraResponse"/>
 </message>
 <message name="registrasiAdmin">
 <part name="parameters" element="tns:registrasiAdmin"/>
@@ -34,11 +40,11 @@
 <message name="registrasiAdminResponse">
 <part name="parameters" element="tns:registrasiAdminResponse"/>
 </message>
-<message name="registrasiMitra">
-<part name="parameters" element="tns:registrasiMitra"/>
+<message name="displayReservasi">
+<part name="parameters" element="tns:displayReservasi"/>
 </message>
-<message name="registrasiMitraResponse">
-<part name="parameters" element="tns:registrasiMitraResponse"/>
+<message name="displayReservasiResponse">
+<part name="parameters" element="tns:displayReservasiResponse"/>
 </message>
 <message name="cekLoginMitra">
 <part name="parameters" element="tns:cekLoginMitra"/>
@@ -52,36 +58,34 @@
 <message name="displayMitraResponse">
 <part name="parameters" element="tns:displayMitraResponse"/>
 </message>
-<message name="displayReservasi">
-<part name="parameters" element="tns:displayReservasi"/>
-</message>
-<message name="displayReservasiResponse">
-<part name="parameters" element="tns:displayReservasiResponse"/>
-</message>
 <portType name="EzBookingWS">
-<operation name="hello">
-<input wsam:Action="http://disprog.ubaya.com/EzBookingWS/helloRequest" message="tns:hello"/>
-<output wsam:Action="http://disprog.ubaya.com/EzBookingWS/helloResponse" message="tns:helloResponse"/>
+<operation name="registrasiPelanggan">
+<input wsam:Action="http://disprog.ubaya.com/EzBookingWS/registrasiPelangganRequest" message="tns:registrasiPelanggan"/>
+<output wsam:Action="http://disprog.ubaya.com/EzBookingWS/registrasiPelangganResponse" message="tns:registrasiPelangganResponse"/>
 </operation>
 <operation name="cekLoginPelanggan">
 <input wsam:Action="http://disprog.ubaya.com/EzBookingWS/cekLoginPelangganRequest" message="tns:cekLoginPelanggan"/>
 <output wsam:Action="http://disprog.ubaya.com/EzBookingWS/cekLoginPelangganResponse" message="tns:cekLoginPelangganResponse"/>
 </operation>
-<operation name="registrasiPelanggan">
-<input wsam:Action="http://disprog.ubaya.com/EzBookingWS/registrasiPelangganRequest" message="tns:registrasiPelanggan"/>
-<output wsam:Action="http://disprog.ubaya.com/EzBookingWS/registrasiPelangganResponse" message="tns:registrasiPelangganResponse"/>
-</operation>
 <operation name="cekLoginAdministrator">
 <input wsam:Action="http://disprog.ubaya.com/EzBookingWS/cekLoginAdministratorRequest" message="tns:cekLoginAdministrator"/>
 <output wsam:Action="http://disprog.ubaya.com/EzBookingWS/cekLoginAdministratorResponse" message="tns:cekLoginAdministratorResponse"/>
+</operation>
+<operation name="hello">
+<input wsam:Action="http://disprog.ubaya.com/EzBookingWS/helloRequest" message="tns:hello"/>
+<output wsam:Action="http://disprog.ubaya.com/EzBookingWS/helloResponse" message="tns:helloResponse"/>
+</operation>
+<operation name="registrasiMitra">
+<input wsam:Action="http://disprog.ubaya.com/EzBookingWS/registrasiMitraRequest" message="tns:registrasiMitra"/>
+<output wsam:Action="http://disprog.ubaya.com/EzBookingWS/registrasiMitraResponse" message="tns:registrasiMitraResponse"/>
 </operation>
 <operation name="registrasiAdmin">
 <input wsam:Action="http://disprog.ubaya.com/EzBookingWS/registrasiAdminRequest" message="tns:registrasiAdmin"/>
 <output wsam:Action="http://disprog.ubaya.com/EzBookingWS/registrasiAdminResponse" message="tns:registrasiAdminResponse"/>
 </operation>
-<operation name="registrasiMitra">
-<input wsam:Action="http://disprog.ubaya.com/EzBookingWS/registrasiMitraRequest" message="tns:registrasiMitra"/>
-<output wsam:Action="http://disprog.ubaya.com/EzBookingWS/registrasiMitraResponse" message="tns:registrasiMitraResponse"/>
+<operation name="displayReservasi">
+<input wsam:Action="http://disprog.ubaya.com/EzBookingWS/displayReservasiRequest" message="tns:displayReservasi"/>
+<output wsam:Action="http://disprog.ubaya.com/EzBookingWS/displayReservasiResponse" message="tns:displayReservasiResponse"/>
 </operation>
 <operation name="cekLoginMitra">
 <input wsam:Action="http://disprog.ubaya.com/EzBookingWS/cekLoginMitraRequest" message="tns:cekLoginMitra"/>
@@ -91,14 +95,10 @@
 <input wsam:Action="http://disprog.ubaya.com/EzBookingWS/displayMitraRequest" message="tns:displayMitra"/>
 <output wsam:Action="http://disprog.ubaya.com/EzBookingWS/displayMitraResponse" message="tns:displayMitraResponse"/>
 </operation>
-<operation name="displayReservasi">
-<input wsam:Action="http://disprog.ubaya.com/EzBookingWS/displayReservasiRequest" message="tns:displayReservasi"/>
-<output wsam:Action="http://disprog.ubaya.com/EzBookingWS/displayReservasiResponse" message="tns:displayReservasiResponse"/>
-</operation>
 </portType>
 <binding name="EzBookingWSPortBinding" type="tns:EzBookingWS">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-<operation name="hello">
+<operation name="registrasiPelanggan">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -116,7 +116,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="registrasiPelanggan">
+<operation name="cekLoginAdministrator">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -125,7 +125,16 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="cekLoginAdministrator">
+<operation name="hello">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="registrasiMitra">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -143,7 +152,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="registrasiMitra">
+<operation name="displayReservasi">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -162,15 +171,6 @@
 </output>
 </operation>
 <operation name="displayMitra">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="displayReservasi">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
