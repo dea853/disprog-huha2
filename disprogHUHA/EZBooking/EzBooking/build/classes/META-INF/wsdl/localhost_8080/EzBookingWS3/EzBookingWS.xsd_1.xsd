@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://disprog.ubaya.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://disprog.ubaya.com/">
+
+<xs:element name="cekLoginAdministrator" type="tns:cekLoginAdministrator"/>
+
+<xs:element name="cekLoginAdministratorResponse" type="tns:cekLoginAdministratorResponse"/>
+
+<xs:element name="cekLoginMitra" type="tns:cekLoginMitra"/>
+
+<xs:element name="cekLoginMitraResponse" type="tns:cekLoginMitraResponse"/>
+
+<xs:element name="cekLoginPelanggan" type="tns:cekLoginPelanggan"/>
+
+<xs:element name="cekLoginPelangganResponse" type="tns:cekLoginPelangganResponse"/>
+
+<xs:element name="displayMitra" type="tns:displayMitra"/>
+
+<xs:element name="displayMitraResponse" type="tns:displayMitraResponse"/>
+
+<xs:element name="displayReservasi" type="tns:displayReservasi"/>
+
+<xs:element name="displayReservasiResponse" type="tns:displayReservasiResponse"/>
+
+<xs:element name="hello" type="tns:hello"/>
+
+<xs:element name="helloResponse" type="tns:helloResponse"/>
+
+<xs:element name="registrasiAdmin" type="tns:registrasiAdmin"/>
+
+<xs:element name="registrasiAdminResponse" type="tns:registrasiAdminResponse"/>
+
+<xs:element name="registrasiMitra" type="tns:registrasiMitra"/>
+
+<xs:element name="registrasiMitraResponse" type="tns:registrasiMitraResponse"/>
+
+<xs:element name="registrasiPelanggan" type="tns:registrasiPelanggan"/>
+
+<xs:element name="registrasiPelangganResponse" type="tns:registrasiPelangganResponse"/>
+
+<xs:complexType name="cekLoginPelanggan">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cekLoginPelangganResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="displayReservasi">
+<xs:sequence>
+<xs:element name="namaPelanggan" type="tns:pelanggan" minOccurs="0"/>
+<xs:element name="namaRestoran" type="tns:mitraResto" minOccurs="0"/>
+<xs:element name="tanggalPemesanan" type="tns:date" minOccurs="0"/>
+<xs:element name="jumlahOrang" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="pelanggan">
+<xs:sequence>
+<xs:element name="kodePelanggan" type="xs:int"/>
+<xs:element name="namaPengguna" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="mitraResto">
+<xs:sequence>
+<xs:element name="jumlahMeja" type="xs:int"/>
+<xs:element name="kodeResto" type="xs:int"/>
+<xs:element name="namaPemilik" type="xs:string" minOccurs="0"/>
+<xs:element name="namaResto" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="date">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="displayReservasiResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registrasiMitra">
+<xs:sequence>
+<xs:element name="namaPemilik" type="xs:string" minOccurs="0"/>
+<xs:element name="namaResto" type="xs:string" minOccurs="0"/>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="jumlahMeja" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registrasiMitraResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cekLoginMitra">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cekLoginMitraResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hello">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registrasiPelanggan">
+<xs:sequence>
+<xs:element name="namaPengguna" type="xs:string" minOccurs="0"/>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registrasiPelangganResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cekLoginAdministrator">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cekLoginAdministratorResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registrasiAdmin">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registrasiAdminResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="displayMitra">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="displayMitraResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

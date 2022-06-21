@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/EzBookingWS3/EzBookingWS?wsdl" uri="xml-resources/web-service-references/EzBookingWS/wsdl/localhost_8080/EzBookingWS3/EzBookingWS.wsdl"/>
+    <system systemId="http://localhost:8080/EzBookingWS3/EzBookingWS?xsd=1" uri="xml-resources/web-service-references/EzBookingWS/wsdl/localhost_8080/EzBookingWS3/EzBookingWS.xsd_1.xsd"/>
+</catalog>
